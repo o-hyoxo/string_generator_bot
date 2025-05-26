@@ -16,8 +16,8 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN environment variable is required")
 
-# 创建机器人客户端
-bot = Client("bot", bot_token=BOT_TOKEN)
+# 创建机器人客户端 - 机器人也需要API_ID和API_HASH
+bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # 存储用户会话状态
 user_sessions = {}
